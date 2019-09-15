@@ -1,8 +1,8 @@
 CXX = g++
 VARNAME = value
 CXXFLAGS = -g -Wall
-main: main.cpp myfunc.cpp myfunc.h
-	$(CXX) $(CXXFLAGS) -c main.cpp myfunc.cpp myfunc.h
+main: myfunc.h myfunc.cpp main.cpp
+	$(CXX) $(CXXFLAGS) -c myfunc.h myfunc.cpp main.cpp
 	$(CXX) $(CXXFLAGS) -o myexe main.o myfunc.o
 make clean:
 	rm main.o
